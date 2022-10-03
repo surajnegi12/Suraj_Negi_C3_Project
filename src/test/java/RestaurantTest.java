@@ -64,5 +64,12 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     //Tdd to add price
-
+    @Test
+    public  void addingTotalCostOfItems(){
+        resturantDeatils();
+        restaurant.addToMenu("Sizzling brownie",319);
+        List<String> orderedItems= Arrays.asList("Sweet corn soup","Vegetable lasagne","Sizzling brownie");
+        int totalItemCost= restaurant.gettotalItemCost(orderedItems);
+        assertEquals(totalItemCost,707);
+    }
 }
