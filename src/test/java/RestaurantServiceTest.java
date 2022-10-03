@@ -68,4 +68,10 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void searching_fo_existing_restaurant_should_return_expected_restaurant_object() throws restaurantNotFoundException {
+        //WRITE UNIT TEST CASE HERE
+        resturantDetails();
+        assertNull(restaurant);
+    }
 }
